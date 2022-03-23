@@ -16,12 +16,12 @@ body {
     margin: 0;
 }
 
-.container {
+.movie-container {
     margin: 20px 0;
 
 }
 
-.container select {
+.movie-container select {
     background-color: white;
     border: 0;
     border-radius: 5px;
@@ -33,6 +33,12 @@ body {
     -webkit-appearance: none;
 
 }
+
+.container {
+    perspective: 1000px;
+    margin-bottom: 30px;
+  }
+  
 
 .seat {
    background-color: #444451;
@@ -57,7 +63,7 @@ body {
     margin-right: 18px;
 }
 
-.seat:last-of-type(2) {
+.seat:nth-last-of-type(2) {
     margin-left: 18px;
 }
 
@@ -102,4 +108,12 @@ body {
     margin: 15px 0;
     transform: rotateX(-45deg);
     box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+}
+
+p.text {
+    margin: 5px 0;
+}
+
+p.text span {
+    color: #6feaf6;
 }
