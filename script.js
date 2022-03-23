@@ -5,7 +5,7 @@ var total = document.getElementById('total');
 var movieSelect = document.getElementById('movie');
 // selecting all the ids and classes required.
 
-const ticketPrice = +movieSelect.value;  //Converting to integer
+var ticketPrice = +movieSelect.value;  //Converting to integer
 
 
 // to update total and count
@@ -16,6 +16,15 @@ updateSelectedCount = () =>{
    total.innerText = selectedSeatsCount*ticketPrice;
    
 }
+// /movie selector event listener 
+
+movieSelect.addEventListener('change',(e)=>{
+    ticketPrice = +e.target.value;
+    updateSelectedCount();
+});
+
+
+
 
 
 //Event Listener for Seats 
